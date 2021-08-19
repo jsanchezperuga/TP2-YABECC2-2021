@@ -25,9 +25,4 @@ const cliente = Object.freeze(persona)
 cliente.nombre = 'Juan';
 
 console.log(cliente.nombre);
-[2,4,5].array.forEach(element => {
-    console.log(element);
-});
-
-//VOLVEMOS 9:34!!
 
