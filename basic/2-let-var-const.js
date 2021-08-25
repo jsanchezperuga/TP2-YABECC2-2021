@@ -25,4 +25,3 @@ const cliente = Object.freeze(persona)
 cliente.nombre = 'Juan';
 
 console.log(cliente.nombre);
-
