@@ -11,7 +11,16 @@
  * @return {Number} 
  */
 const sockMerchant = function(colorSocks){
-   
+   colorSocks.sort();
+   let count = 0;
+   for(let i = 0; i < colorSocks.length-1; i++){
+       if(colorSocks[i] === colorSocks[i+1]){
+            count++;
+            i++;
+            //[1, 1, 1, 2,2, 2, 3]
+       }
+   }
+   return count;
 }
 
 // TESTS TDD
