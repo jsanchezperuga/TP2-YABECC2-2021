@@ -7,7 +7,7 @@ console.log(typeof var1);
 
 // Undefined
 let nodenifida;
-nodenifida = 10;
+//nodenifida = 10;
 console.log(nodenifida);
 
 // Null 

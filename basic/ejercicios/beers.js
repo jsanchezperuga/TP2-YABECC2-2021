@@ -19,3 +19,9 @@ const beers = [
     { name: 'Belgian Wit', abv: 5.4, label: 'https://s3.amazonaws.com/brewerydbapi/beer/3CvVQG/upload_xOMnlK-large.png', type: 'Wheat' },
     { name: 'Stolen Fruit', abv: 4.6, label: 'https://s3.amazonaws.com/brewerydbapi/beer/YGT30k/upload_uVCHP7-large.png', type: 'Wheat' },
   ];
+
+  //1. acá hay que agregar una propiedad al objeto y usar un par de ifs para asignarles el valor correspondiente
+
+  const agregarPrecio = function (){
+    
+  }
