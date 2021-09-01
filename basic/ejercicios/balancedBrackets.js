@@ -17,15 +17,19 @@
 // ((()))
 const isValid = function(s){ 
     let aux = -1;
+    let respuesta = 'YES';
     while (s.length !=0) {     
         aux = s.length;
         s = s.replace("()","");
         s = s.replace("[]","");
         s = s.replace("{}","");
         // puede reemplazar algo?
-        if(aux === s.length) return 'NO';
+        if(aux === s.length){ 
+            respuesta = 'NO';
+            break;
+        }
     }
-    return 'YES';
+    return respuesta;
 };
 
 // TESTS
