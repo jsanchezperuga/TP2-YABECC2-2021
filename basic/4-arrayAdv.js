@@ -57,3 +57,4 @@ printInventors(inventors
 // Si todos los inventores nacieron despues del 1500
 
 // Ordenar los inventores por fecha de nacimiento
+//inventors.sort()
