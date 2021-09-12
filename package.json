@@ -1,0 +1,23 @@
+{
+  "name": "betp2-c",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "startdev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ORT-PabloFernandez/TP2-YABECC2-2021.git"
+  },
+  "author": "Pablo Fernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ORT-PabloFernandez/TP2-YABECC2-2021/issues"
+  },
+  "homepage": "https://github.com/ORT-PabloFernandez/TP2-YABECC2-2021#readme",
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}
