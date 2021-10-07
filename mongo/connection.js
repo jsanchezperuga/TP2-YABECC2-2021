@@ -1,21 +1,23 @@
 //const { MongoClient } = require('mongodb');
+import dotenv from 'dotenv';
 import {MongoClient} from 'mongodb';
 
-// TODO: llevar a variables de entorno.
-//const uri = "mongodb+srv://admin:tp2@cluster0.3bm3a.azure.mongodb.net/sample_tp2?retryWrites=true&w=majority";
+dotenv.config();
+
+const uri = process.env.MONGODB;
 const DB_TP = "sample_tp2";
 //const COLLECTION_INVENTORS = "inventors1111";
-
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-// TODO: Controlar que se utilice solo una conexión, se prodria hacer un singlenton
+let instance = null;
 async function getConnection(){
-    let instance = null;
-    try {
-        instance = client.connect();
-    } catch (error) {
-        console.error(error.message);
-        throw new Error('Error al conectarse con sample_tp2');
+    if(instance == null){
+        try {
+            instance = client.connect();
+        } catch (error) {
+            console.error(error.message);
+            throw new Error('Error al conectarse con sample_tp2');
+        }
     }
     return instance;
 }
