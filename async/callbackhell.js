@@ -9,6 +9,8 @@
 import fs from 'fs';
 const PATH = './inventors.json';
 
+fs.readFile()
+
 // 1.-
 fs.readFile(PATH, 'utf-8', (err, data) => {
   if(!err){
