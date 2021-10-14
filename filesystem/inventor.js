@@ -16,10 +16,10 @@ function getInventor(id){
 
 // Alta
 function pushInventor(inventor){
-    let inventors = getInventors();
+    let lesinventors = getInventors();
     inventors.push(inventor);
     
-    fs.writeFileSync(PATH, JSON.stringify({inventors:inventors}, null, ' '));
+    fs.writeFileSync(PATH, JSON.stringify({inventors:lesinventors}, null, ' '));
 }
 
 // Modificacion 

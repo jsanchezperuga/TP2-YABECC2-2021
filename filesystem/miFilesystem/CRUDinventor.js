@@ -8,12 +8,15 @@ function getInventors(){
 }
 
 function getInventor(id){
-     return getInventors
-        .filter()
+     return getInventors()
+        .filter(inv => inv._id === id)
 }
 
 function pushInventor(inventor){
+    let dataInventors = getInventors();
+    dataInventors.push(inventor);
 
+    fs.writeFileSync(PATH,JSON.stringify(dataInventors),);
 }
 
 function updateInventor(id, inventor){
