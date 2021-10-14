@@ -15,12 +15,11 @@ function getInventor(id){
 function pushInventor(inventor){
     let dataInventors = getInventors();
     dataInventors.push(inventor);
-
-    fs.writeFileSync(PATH,JSON.stringify(dataInventors),);
+    fs.writeFileSync(PATH,JSON.stringify({inventors:dataInventors}),null,' ');
 }
 
 function updateInventor(id, inventor){
-
+    
 }
 
 function deleteInventor(id){
