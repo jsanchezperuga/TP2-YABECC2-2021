@@ -19,11 +19,19 @@ function pushInventor(inventor){
 }
 
 function updateInventor(id, inventor){
-    
+    let dataInventors = getInventors();
+    let i = dataInventors.findIndex((e)=>e._id===id);
+    if(i){
+        dataInventors[i]=inventor;
+        fs.writeFileSync(PATH,JSON.stringify({inventors:dataInventors}),null,' ');
+    }else{
+        console.log('No se encontró un registro con id ', id);
+    }
 }
 
 function deleteInventor(id){
-
+    let data = getInventors();
+    let newData = data.slice
 }
 
 module.exports = {getInventors, getInventor, pushInventor, updateInventor,deleteInventor};

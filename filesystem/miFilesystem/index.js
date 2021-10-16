@@ -6,10 +6,13 @@ const inventorData = require('./CRUDinventor');
 
 const newInventor = {
     "_id": 9,
-   "first": "Fabi",
-   "last": "Marshall",
+   "first": "Fabiola",
+   "last": "Marcial",
    "year": 1875
 }
 
-inventorData.pushInventor(newInventor);
+// inventorData.pushInventor(newInventor);
+
+inventorData.updateInventor(9,newInventor);
+
 console.log(inventorData.getInventors());
