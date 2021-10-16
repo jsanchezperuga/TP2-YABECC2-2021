@@ -5,14 +5,17 @@ const inventorData = require('./CRUDinventor');
 //console.log(inventorData.getInventor(4));
 
 const newInventor = {
-    "_id": 9,
-   "first": "Fabiola",
-   "last": "Marcial",
-   "year": 1875
+    "_id": 11,
+   "first": "Carmela",
+   "last": "Sanchez",
+   "year": 2015
 }
 
-// inventorData.pushInventor(newInventor);
+//inventorData.pushInventor(newInventor);
 
-inventorData.updateInventor(9,newInventor);
+//inventorData.updateInventor(9,newInventor);
+
+
+inventorData.deleteInventor(8);
 
 console.log(inventorData.getInventors());
