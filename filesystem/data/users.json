@@ -1098,12 +1098,6 @@
   "password": "$2b$12$GrKhwH1qeeJNGcGLmjg9f.k7ruCRxGUbfm4z3mgzGkiXXZVvKGCwy"
  },
  {
-  "_id": "59b99e08cfa9a34dcd788669",
-  "name": "Donna Smith",
-  "email": "donna_smith@fakegmail.com",
-  "password": "$2b$12$LYIyq5Bsszh3/8efEYmJRuWDqhOeg8K5czQwSLxEBhOTyhOX34JEy"
- },
- {
   "name": "Juan Perez",
   "email": "juanperez@gameofthron.es",
   "password": "abc123",

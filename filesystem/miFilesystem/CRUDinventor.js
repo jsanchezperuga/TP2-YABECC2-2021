@@ -23,7 +23,7 @@ function pushInventor(inventor){
 function updateInventor(id, inventor){
     let dataInventors = getInventors();
     let i = getIndexById(id,dataInventors);
-    if(i){
+    if(i>=0){
         dataInventors[i]=inventor;
         //fs.writeFileSync(PATH,JSON.stringify({inventors:dataInventors}),null,' ');
         writeToFile(dataInventors);
