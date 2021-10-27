@@ -16,11 +16,45 @@ async function getInventors(){
 
 async function getInventor(id){
     const clientMongo = await getConnection();
-    const inventor = clientMongo //
+    const inventor = clientMongo
         .db(DB)
         .collection(COLLECTION_INVENTORS)
-        .findOne({_id: new ObjectId()})//el filter que se pasa acá es un objeto de tipo ObjectId
+        .findOne({_id: new ObjectId(id)})//el filter que se pasa acá es un objeto de tipo ObjectId
     return inventor;
 }
 
-export {getInventors,getInventor};
+async function addInventor(inventor){
+    const clientMongo = await getConnection();
+    const result = clientMongo
+        .db(DB)
+        .collection(COLLECTION_INVENTORS)
+        .insertOne(inventor);
+    return result;
+}
+
+async function updateInventor(inventor){
+    const clientMongo = await getConnection();
+    const query = {_id:new ObjectId(inventor._id)}
+    const newValues = {
+        $set:{
+            first : inventor.first,
+            last : inventor.last,
+            year : inventor.year
+        }
+    };
+
+    const result = clientMongo.db(DB)
+        .collection(COLLECTION_INVENTORS)
+        .updateOne(query,newValues);
+    return result;
+}
+async function deleteInventor(id){
+    const clientMongo = await getConnection();
+    const result = clientMongo
+        .db(DB)
+        .collection(COLLECTION_INVENTORS)
+        .deleteOne({_id : new ObjectId(id)});   
+    return result;
+}
+
+export {getInventors,getInventor, addInventor, updateInventor,deleteInventor};
