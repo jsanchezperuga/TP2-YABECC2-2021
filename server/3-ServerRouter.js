@@ -36,5 +36,7 @@ http.createServer((req, res)=>{
     }
     res.end();
 }).listen(3000, 'localhost', ()=>{
+
+    
     console.log('Servidor web iniciado escuchando el puerto 3000');
 });
